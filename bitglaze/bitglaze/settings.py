@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL='basics.User'
 
 # Application definition
 
@@ -37,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'basics',
     'rest_framework',
     'oauth2_provider',
+    'basics',
 ]
 
 MIDDLEWARE = [
@@ -132,5 +133,4 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 
-AUTH_USER_MODEL='basics.User'
 LOGIN_URL='/admin/login/'
